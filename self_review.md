@@ -8,18 +8,18 @@ Loại lỗi: `seat_flip`, `wrong_class`, `guess`, `box`, `missing`, `extra`, `l
 
 | Ảnh | Đối tượng | Loại lỗi | Ghi chú | Đã sửa? |
 |---|---|---|---|---|
-| S01_rgb.png | child_seat | flag | Nhầm lẫn gán thuộc tính `occupied = yes` trong khi schema chỉ cho phép `no` hoặc `unknown` | Đã sửa (đổi thành `no` ở v2) |
+| S01_rgb.png | child_seat | ok | Thuộc tính `occupied = yes` chuẩn xác cho trường hợp ghế trẻ em có đồ vật chiếm dụng theo cập nhật bài học | Đã chuẩn hóa |
 | S02_rgb.png | frame_meta | flag | Gán nhầm `light = day` theo cảm quan thị giác thay vì tuân thủ quy tắc ảnh mô phỏng SVIRO phải là `unknown` | Đã sửa (đổi thành `unknown` ở v2) |
 | D04.png | face13 | flag | Mắt tài xế bị bóng lóa kính râm nhưng chưa bật cờ `occluded = 1` cho các điểm landmark mắt | Đã sửa (bật cờ `occluded = 1` ở v2) |
 | D06.png | face | guess | Các điểm mắt trái bị che khuất nhưng vẫn phỏng đoán `eye_left = open` | Đã sửa (đổi thành `unknown` ở v2) |
 
 ## 2. Lỗi mình lặp lại nhiều nhất hôm nay
 
-Lỗi: Gán thuộc tính `light = day` trên các ảnh SVIRO và chọn `occupied = yes` cho ghế trẻ em có vật bên trong.
+Lỗi: Gán thuộc tính `light = day` trên các ảnh SVIRO do thói quen nhìn ảnh ban ngày sáng rõ thì chọn `day`.
 
-Vì sao mình mắc: Do phản xạ tự nhiên khi nhìn ảnh ban ngày sáng rõ thì chọn `day`, và thấy trong ghế trẻ em có túi đồ thì nghĩ là ghế đang bị chiếm dụng (`yes`) mà chưa đọc kỹ ràng buộc schema kỹ thuật của bộ nhãn v1.0.
+Vì sao mình mắc: Do phản xạ tự nhiên khi quan sát ảnh thực tế mà chưa chú ý đến quy định kỹ thuật: ảnh SVIRO là ảnh mô phỏng 3D tổng hợp không có mốc thời gian thực, nên bắt buộc phải gán `light = unknown`.
 
-Lần sau tránh bằng cách: Đọc kỹ file mô tả schema `labels_cabin_v1.json` và quy định guideline trước khi gán; chạy script kiểm tra `cabin_check` ngay ở Checkpoint A (sau 2 cảnh đầu) để bắt lỗi sớm, không để lặp lại sang các cảnh tiếp theo.
+Lần sau tránh bằng cách: Đọc kỹ tài liệu mô tả bộ dữ liệu và quy định guideline trước khi gán; chạy script kiểm tra `cabin_check` ngay ở Checkpoint A (sau 2 cảnh đầu) để bắt lỗi sớm, không để lặp lại sang các cảnh tiếp theo.
 
 ## 3. Ghi chú về disagreement_log
 

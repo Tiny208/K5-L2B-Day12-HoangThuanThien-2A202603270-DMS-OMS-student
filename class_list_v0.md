@@ -28,9 +28,9 @@ Viết tiếp từ slide 54 bài giảng. Mỗi lớp trả lời: **model cần
 
 Câu hỏi bạn muốn hỏi người viết guideline (hoặc khách hàng) vì guideline v1.0 chưa trả lời. Mỗi câu kèm **tên khung** làm ví dụ.
 
-1. **Câu hỏi:** Trong trường hợp ghế trẻ em (`child_seat`) có đặt một chiếc ba lô hoặc túi xách to bên trong, guideline yêu cầu vẽ 2 box riêng biệt (`child_seat` và `object`) nhưng thuộc tính `occupied` của `child_seat` lại chỉ có 2 giá trị là `no` hoặc `unknown`. Khi ghế đã chứa một vật thể rõ ràng, tại sao không cho phép gán `occupied = yes` (hoặc tạo thêm giá trị `occupied = object_only`) để phân biệt rành mạch giữa ghế hoàn toàn trống rỗng và ghế đang bị chiếm chỗ bởi đồ vật?
-   - **Khung ví dụ:** `S01_rgb.png` và `S08_rgb.png` (ghế trẻ em có vật bên trong).
-   - **Bạn tạm gán thế nào và vì sao:** Nhóm tạm gán `child_seat` có `occupied = no` kèm thêm 1 box `object` đè lên theo đúng quy tắc kỹ thuật của Guideline v1.0 nhằm vượt qua script kiểm tra tự động `cabin_check`, đồng thời ghi chú vào báo cáo để kiến nghị nâng cấp schema ở phiên bản sau.
+1. **Câu hỏi:** Khi chương trình cập nhật bổ sung giá trị `occupied = yes` cho ghế trẻ em (`child_seat`) có chứa đồ vật/chiếm dụng, trong trường hợp ghế trẻ em chỉ bị chăn phủ một góc nhỏ hoặc chỉ có 1 chai nước/đồ vật rất nhỏ đặt trên đệm ghế thì ngưỡng diện tích chiếm dụng tối thiểu bao nhiêu % sẽ được đánh dấu là `occupied = yes` thay vì `occupied = no`?
+   - **Khung ví dụ:** `S01_rgb.png` và `S08_rgb.png` (ghế trẻ em có túi đồ bên trong).
+   - **Bạn tạm gán thế nào và vì sao:** Nhóm gán `child_seat` có `occupied = yes` kèm thêm box `object` theo đúng hướng dẫn cập nhật mới nhất của chương trình học, đảm bảo phản ánh đúng thực tế ghế đang có vật chiếm chỗ.
 
 2. **Câu hỏi:** Trên ảnh chụp camera hồng ngoại bị xoay 90° (như bộ ảnh Drive&Act), khi tài xế cúi đầu sử dụng điện thoại và một bàn tay chỉ chạm 1–2 đầu ngón tay vào vô lăng trong khi lòng bàn tay đã rời hẳn vô lăng, tiêu chuẩn tính `on_wheel = yes` được xác định theo diện tích tiếp xúc hay chỉ cần có bất kỳ điểm chạm nào?
    - **Khung ví dụ:** `D04.png`.
