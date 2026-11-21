@@ -1,0 +1,7 @@
+frame_id,source,phenomenon,affected_field,effect_on_label
+S01_ir,IR_sim,"Áo tối màu của người ngồi sau bị hòa lẫn với nền ghế nỉ tối do thiếu sắc độ màu RGB",person,"Khó xác định biên thân người nếu chỉ nhìn ảnh xám, phải căn theo hình khối vai để vẽ box sát người"
+S03_ir,IR_sim,"Dây an toàn chìm hoàn toàn vào nền ghế tối do kênh hồng ngoại mô phỏng không có độ tương phản màu",seatbelt,"Không thấy vệt dây an toàn chéo qua ngực, tuân thủ guideline ghi unknown thay vì phỏng đoán"
+S07_ir,IR_sim,"Đồ vật (thùng/túi) bị mất toàn bộ hoa văn và chữ in nhận diện màu sắc",object_type,"Chỉ xác định được dạng hình khối chữ nhật (type = box) dựa vào viền góc cạnh, không đọc được nhãn hiệu"
+D01,real_IR,"Đèn LED hồng ngoại chủ động (NIR 850/940nm) tạo vệt phản xạ chói sáng (glint) trên tròng kính",eye_state,"Điểm mí mắt dưới vệt chói không nhìn rõ được mí khép hay mở, gán eye = unknown và bật cờ occluded=1"
+D03,real_IR,"Tương phản quang phổ NIR cao giữa mống mắt (phản xạ sáng) và con ngươi (hấp thụ đen kịt)",gaze_zone,"Định vị rõ tâm đồng tử mắt đang nhìn chếch xuống cụm đồng hồ sau vô lăng, gán gaze_zone = cluster"
+D05,real_IR,"Cường độ chiếu sáng NIR giảm mạnh theo khoảng cách (1/d^2) từ cột lái xuống sàn xe",seatbelt,"Khu vực chốt cài dây an toàn ở hông bị tối đen, không xác định được chốt cài nên ghi seatbelt = unknown"

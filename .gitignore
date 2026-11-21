@@ -11,3 +11,8 @@ __pycache__/
 *.pyc
 .DS_Store
 .env*
+
+G*.zip
+khiem.zip
+check_khiem.txt
+K5-L2-DAY12-*
