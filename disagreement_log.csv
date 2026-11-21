@@ -1,0 +1,38 @@
+﻿image,label,field,issue,mine,peer,verdict,guideline_rule,action
+D02.png,person,seatbelt,khác giá trị (IoU=0.98),unknown,not_worn,peer,4.7,Cập nhật not_worn do quan sát thấy rõ không có vệt dây thắt
+D03.png,face13,lip_upper.occluded,khác cờ,1,0,mine,4.6,Giữ occluded=1 vì mép môi trên bị vật cản che khuất
+D04.png,person,seatbelt,khác giá trị (IoU=0.89),worn_correct,worn_incorrect,mine,4.7,Giữ worn_correct vì thấy dải đai chéo qua vai xuống hông đối diện
+D04.png,face13,left_eye_outer.occluded,khác cờ,0,1,peer,4.6,Bật cờ occluded=1 cho các điểm mắt bị phản xạ kính râm che
+D04.png,face13,left_eye_inner.occluded,khác cờ,0,1,peer,4.6,Bật cờ occluded=1 cho các điểm mắt bị phản xạ kính râm che
+D04.png,face13,left_eye_upper.occluded,khác cờ,0,1,peer,4.6,Bật cờ occluded=1 cho các điểm mắt bị phản xạ kính râm che
+D04.png,face13,left_eye_lower.occluded,khác cờ,0,1,peer,4.6,Bật cờ occluded=1 cho các điểm mắt bị phản xạ kính râm che
+D04.png,face13,right_eye_outer.occluded,khác cờ,0,1,peer,4.6,Bật cờ occluded=1 cho các điểm mắt bị phản xạ kính râm che
+D04.png,face13,right_eye_inner.occluded,khác cờ,0,1,peer,4.6,Bật cờ occluded=1 cho các điểm mắt bị phản xạ kính râm che
+D04.png,face13,right_eye_upper.occluded,khác cờ,0,1,peer,4.6,Bật cờ occluded=1 cho các điểm mắt bị phản xạ kính râm che
+D04.png,face13,right_eye_lower.occluded,khác cờ,0,1,peer,4.6,Bật cờ occluded=1 cho các điểm mắt bị phản xạ kính râm che
+D05.png,phone,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,mine,4.7,Giữ box phone vì thấy rõ cạnh viền và góc màn hình điện thoại
+D06.png,face,eye_left,khác giá trị (IoU=0.81),open,unknown,peer,4.5,Sửa thành unknown vì các điểm mắt trái bị che khuất không xác định được mí
+D06.png,face,eye_right,khác giá trị (IoU=0.81),unknown,open,mine,4.5,Giữ giá trị unknown theo đúng quan sát tư thế đầu và gọng kính
+D06.png,face,gaze_zone,khác giá trị (IoU=0.81),other,mirror_l,mine,4.5,Giữ giá trị other theo đúng quan sát tư thế đầu và gọng kính
+D06.png,face,glasses,khác giá trị (IoU=0.81),clear,unknown,mine,4.5,Giữ giá trị clear theo đúng quan sát tư thế đầu và gọng kính
+D06.png,face13,left_eye_outer.occluded,khác cờ,1,0,mine,4.6,Chọn occluded thay vì outside vì điểm vẫn nằm trong khung hình
+D06.png,face13,left_eye_outer.outside,khác cờ,0,1,mine,4.6,Chọn occluded thay vì outside vì điểm vẫn nằm trong khung hình
+D06.png,face13,left_eye_inner.occluded,khác cờ,1,0,mine,4.6,Chọn occluded thay vì outside vì điểm vẫn nằm trong khung hình
+D06.png,face13,left_eye_inner.outside,khác cờ,0,1,mine,4.6,Chọn occluded thay vì outside vì điểm vẫn nằm trong khung hình
+D06.png,face13,left_eye_upper.occluded,khác cờ,1,0,mine,4.6,Chọn occluded thay vì outside vì điểm vẫn nằm trong khung hình
+D06.png,face13,left_eye_upper.outside,khác cờ,0,1,mine,4.6,Chọn occluded thay vì outside vì điểm vẫn nằm trong khung hình
+D06.png,face13,left_eye_lower.occluded,khác cờ,1,0,mine,4.6,Chọn occluded thay vì outside vì điểm vẫn nằm trong khung hình
+D06.png,face13,left_eye_lower.outside,khác cờ,0,1,mine,4.6,Chọn occluded thay vì outside vì điểm vẫn nằm trong khung hình
+S02_ir.png,child_seat,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,ambiguous,4.8,Đưa vào danh sách hỏi coach do hình dạng nôi xách và ghế trẻ em ở góc khuất khó phân định
+S02_ir.png,face,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,ambiguous,4.8,Đưa vào danh sách hỏi coach do hình dạng nôi xách và ghế trẻ em ở góc khuất khó phân định
+S02_ir.png,infant_seat,box,chỉ có ở peer (hoặc IoU thấp),,,ambiguous,4.8,Đưa vào danh sách hỏi coach do hình dạng nôi xách và ghế trẻ em ở góc khuất khó phân định
+S02_rgb.png,frame_meta,light,khác giá trị,day,unknown,peer,4.3-1,Đổi light thành unknown theo quy định ảnh mô phỏng SVIRO
+S02_rgb.png,child_seat,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,ambiguous,4.8,Đưa vào danh sách hỏi coach do hình dạng nôi xách và ghế trẻ em ở góc khuất khó phân định
+S02_rgb.png,face,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,ambiguous,4.8,Đưa vào danh sách hỏi coach do hình dạng nôi xách và ghế trẻ em ở góc khuất khó phân định
+S02_rgb.png,infant_seat,box,chỉ có ở peer (hoặc IoU thấp),,,ambiguous,4.8,Đưa vào danh sách hỏi coach do hình dạng nôi xách và ghế trẻ em ở góc khuất khó phân định
+S03_rgb.png,frame_meta,light,khác giá trị,day,unknown,peer,4.3-1,Đổi light thành unknown theo quy định ảnh mô phỏng SVIRO
+S04_rgb.png,frame_meta,light,khác giá trị,day,unknown,peer,4.3-1,Đổi light thành unknown theo quy định ảnh mô phỏng SVIRO
+S05_rgb.png,frame_meta,light,khác giá trị,day,unknown,peer,4.3-1,Đổi light thành unknown theo quy định ảnh mô phỏng SVIRO
+S06_rgb.png,frame_meta,light,khác giá trị,day,unknown,peer,4.3-1,Đổi light thành unknown theo quy định ảnh mô phỏng SVIRO
+S07_rgb.png,frame_meta,light,khác giá trị,day,unknown,peer,4.3-1,Đổi light thành unknown theo quy định ảnh mô phỏng SVIRO
+S08_rgb.png,frame_meta,light,khác giá trị,day,unknown,peer,4.3-1,Đổi light thành unknown theo quy định ảnh mô phỏng SVIRO
